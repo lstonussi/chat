@@ -1,3 +1,4 @@
+import 'package:chat/chat_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -22,9 +23,9 @@ void main() async {
 //    });
 //  });
 
-  Firestore.instance.collection('mensagens').document('55u5Kw5e3NvGMywiBrnI').snapshots().listen((dado){
-    print(dado.data);
-  });
+//  Firestore.instance.collection('mensagens').document('55u5Kw5e3NvGMywiBrnI').snapshots().listen((dado){
+//    print(dado.data);
+//  });
 }
 
 class MyApp extends StatelessWidget {
@@ -35,8 +36,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        iconTheme: IconThemeData(color: Colors.blue)
       ),
-      home: Container(),
+      home: ChatScreen(),
     );
   }
 }
